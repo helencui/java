@@ -93,6 +93,42 @@ public class usingAttribute {
 //下面这个范例说明了使用Person类的对象调用类中的属性和方法的过程
 public class objectDemo 
 {
-    
+    public class ObjectDemo {
+    public static void main(String[] args)
+    {
+        Person p1=new Person();
+        p1.name="崔崔";
+        p1.age=25;
+        p1.talk();
+    }
+}
+
+class Person
+{
+    String name;
+    int age;
+    void talk()
+    {
+        System.out.println("我是："+name+",今年："+age+"岁");
+    }
 }
 ```
+
+### 创建匿名对象
+```{java}
+public class NoNameObject {
+    public void say()
+    {
+        System.out.println("我不想学java");
+    }
+    
+    public static void main(String[] args)
+    {
+        //这是匿名对象，没有被其他对象所引用
+        new NoNameObject().say();
+    }
+}
+
+```
+
+
